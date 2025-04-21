@@ -13,17 +13,22 @@ public class PizzaOrderingSystem {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(System.in);
-        int[] prices = {120, 80, 50};
+        int[] prices = {380,250, 350};
         int[] quantities = new int[3];
         String[] items = {"Italian", "Ham & Cheese", "Beef & Mushrooms"};
 
         System.out.println("🍽️️ Welcome to the Pizza Ordering System!");
-        System.out.println("[1] Login\n[2] Create Account");
+        System.out.println("[1] Login\n[2] Create Account\n[3] Checkout");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
         sc.nextLine();
 
-        try {
+        if (choice == 3) {
+            System.out.println("Thank you for visiting. Goodbye!");
+            return;
+        }
+
+       try {
             if (choice == 2) {
                 System.out.println("\n🧾 Create New Account");
                 System.out.print("Enter new username: ");
@@ -52,7 +57,7 @@ public class PizzaOrderingSystem {
                     for (int i = 0; i < items.length; i++) {
                         System.out.println((i + 1) + ". " + items[i] + " - ₱" + prices[i]);
                     }
-                    System.out.println("4. Exit");
+                    System.out.println("4. Checkout");
                     System.out.print("Choose a pizza: ");
                     item = sc.nextInt();
 
