@@ -29,7 +29,12 @@ public class JavaLoginGUI {
         JLabel jLabelUsername = new JLabel("     Username:");
         JLabel jLabelPassword = new JLabel("     Password:");
         JButton jButtonLogin = new JButton("Login");
-            
+
+        jLabelUsername.setForeground(Color.blue);
+        jLabelUsername.setForeground(Color.blue);
+        jButtonLogin.setForeground(Color.blue);
+        jButtonLogin.setBackground(Color.skyblue);
+        
       jFrame.setLayout(new GridLayout(3, 2));
         jFrame.getContentPane().add(jLabelUsername);
         jFrame.getContentPane().add(jTextFieldUsername);
@@ -37,6 +42,8 @@ public class JavaLoginGUI {
         jFrame.getContentPane().add(jPasswordPassword);
          jFrame.add(new JLabel(""));       
         jFrame.getContentPane().add(jButtonLogin);
+
+        
        
        jFrame.setBounds(600, 300, 400, 250);
 jFrame.setVisible(true);
